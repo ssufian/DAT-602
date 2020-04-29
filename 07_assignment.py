@@ -112,7 +112,7 @@ def exercise03(neighbors,split):
     X=iris.data
     y=iris.target
     df = pd.DataFrame(X, columns=iris.feature_names)
-    X_train, X_test, y_train, y_test = tts(X,y, test_size=split,random_state=2)
+    X_train, X_test, y_train, y_test = tts(X,y, test_size=split,random_state=21,stratify=iris.target)
 
     #Fitting K-NN classifier to the training set   
     classifier= KNN(n_neighbors=neighbors)  
